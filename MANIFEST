@@ -21,3 +21,4 @@ t/lib/TestUtil.pm
 t/sess_bracket
 t/sess_newline
 t/sess_quote
+META.yml                                 Module meta-data (added by MakeMaker)

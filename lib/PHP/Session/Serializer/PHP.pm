@@ -2,7 +2,7 @@ package PHP::Session::Serializer::PHP;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = q(0.20);
+$VERSION = 0.21;
 
 sub _croak { require Carp; Carp::croak(@_) }
 
@@ -98,12 +98,12 @@ sub encode_object {
 
 sub is_int {
     local $_ = shift;
-    /^-?[0-9]\d{0,8}$/;
+    /^-?(0|[1-9]\d{0,8})$/;
 }
 
 sub is_float {
     local $_ = shift;
-    /^-?[0-9]\d{0,8}\.\d+$/;
+    /^-?(0|[1-9]\d{0,8})\.\d+$/;
 }
 
 # decoder starts here
