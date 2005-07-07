@@ -2,7 +2,7 @@ package PHP::Session::Serializer::PHP;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = 0.22;
+$VERSION = 0.24;
 
 sub _croak { require Carp; Carp::croak(@_) }
 
@@ -238,6 +238,7 @@ my @re = (
     'O:(\d+):',			# object
     '(N);',			# null
     'b:([01]);',		# boolean
+    '[Rr]:(\d+);',              # reference count? 
 );
 
 sub parse {
