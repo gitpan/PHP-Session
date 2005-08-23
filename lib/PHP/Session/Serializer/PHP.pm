@@ -13,7 +13,7 @@ sub new {
 	data   => {},
 	state  => undef,
 	stack  => [],
-	array  => [],		# array-ref of array-ref
+	array  => [],		# array-ref of hash-ref
     }, $class;
 }
 
